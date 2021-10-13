@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Database Firebase</title>
+</head>
+<body>
+
+    <h1>Firebase - Create notes</h1>
+    <div class="container my-5">
+    <div class="col1">
+
+   
+    <form class="formAdd">
+        <label for="recipe">Add a new note</label>
+        <p class="time">Use this form to write a note. Do you want to update an exicsting note, use this form again and click update on the note.</p>
+        <div class="input-group form-style-6">
+            <input type="text" class="form-control" placeholder="Write a title for the note" id="recipe" required>
+            <input type="text" class="form-control" placeholder="Write the note" id="notes" required>
+            
+            <br><input type="checkbox" id="important" name="important" class="checkboxImportant" value="checkmark">
+            <label for="importnatnote"> Vigtig note </label>
+            
+            <div class="input-group-append">
+                <input type="submit" value="Tilføj note" class="btn btn-outline-secondary">
+               
+            </div>
+            <div>
+                
+              
+            </div>
+        </div>
+    </form>
+
+  
+        <form class="search form-style-6">
+            <input class="form-control m auto searchform" type="text" name="search" placeholder="search for note" id="searchID" required>       
+        </form>
+
+
+        <ul class="todos">
+            
+        </ul>
+
+
+    </div>
+    
+    </div>
+
+
+
+ 
+
+                       
+
+                    <div id="importantFilter">
+                
+
+                        <label for="search">Se kun vigtige noter</label>
+                        <input type="checkbox" class="searchImportant" id="filter_IN">
+                        </label>
+                        
+                    </div>
+         
+   
+   
+            
+</div><!-- updateDiv -->
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    
+    <script>
+     
+        const firebaseConfig = {
+          apiKey: "AIzaSyAKHcfA_aRt-9vWcnKIHhEBn0639nl3pKc",
+          authDomain: "mikkel-b7d6c.firebaseapp.com",
+          projectId: "mikkel-b7d6c",
+          storageBucket: "mikkel-b7d6c.appspot.com",
+          messagingSenderId: "116998054575",
+          appId: "1:116998054575:web:a73775f91ba4e2f918aa5a",
+        };
+
+        firebase.initializeApp(firebaseConfig);
+      
+        // Initialize Firebase
+        const db = firebase.firestore(); 
+
+        
+      </script>
+    
+
+
+
+
+<script type="module" src="sandstorm.js"></script>
+
+</body>
+</html>
